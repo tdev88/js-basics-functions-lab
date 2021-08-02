@@ -2,11 +2,13 @@
 let num2 = 42
 
 function distanceFromHqInBlocks(num1) {
-  if (num2 < num1)
-   blocks = num1 - num2;
-  else
-   blocks = num2 - num1;
-  return blocks
+  if (num2 < num1) {
+    return blocks = num1 - num2;
+  } else if (num2 > num1) {
+    return blocks = num2 - num1;
+  } else {
+    return num1
+  }
 }
 
 //Each block in Manhattan is 264 feet long.
@@ -25,10 +27,13 @@ function distanceTravelledInFeet(num1) {
 2.For a distance between 400 and 2000 feet, the price is 2 cents per foot (not including 400, which are free!). 
 3.Then Scuber charges a flat fare for a distance over 2000 feet and under 2500 feet. 4.Finally, Scuber does not allow any rides over 2500 feet - the function returns 'cannot travel that far' if a ride over 2500 feet is requested.*/
 function calculatesFarePrice(num1) {
-  if (distanceTravelledInFeet(num1) > 400 && distanceTravelledInFeet(num1) <=2000) 
+  if (distanceTravelledInFeet(num1) > 400 && distanceTravelledInFeet(num1) <=2000) {
   return 0.02*(num1-400);
-  else if (distanceTravelledInFeet(num1) > 2000 && distanceTravelledInFeet(num1) <= 2500) 
+  }
+  else if (distanceTravelledInFeet(num1) > 2000 && distanceTravelledInFeet(num1) <= 2500) {
   return 25.00;
-  else if (distanceTravelledInFeet(num1) > 2500) 
+  }
+  else {
   return 'cannot travel that far';
+  } 
 }
